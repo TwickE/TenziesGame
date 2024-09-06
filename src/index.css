@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0B2434;
+    font-family: 'Karla', sans-serif;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 80dvh;
+    height: 80dvh;
+    max-width: 90dvw;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.container-dies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.Die {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2B283A;
+    cursor: pointer;
+}
+
+.roll-btn {
+    width: 30%;
+    height: 50px;
+    background-color: #5035ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.25rem;
+    font-family: 'Karla', sans-serif;
+    cursor: pointer;
+}
+
+.roll-btn:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+}
+
+section > h1 {
+    color: #2B283A;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+section > p {
+    color: #2B283A;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    text-align: center;
+}
