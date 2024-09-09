@@ -1,14 +1,18 @@
 import crown from './assets/crown.svg'
 
 function Header(props) {
+    const highScoreStyle = {
+        display: props.bestRolls != "Infinity" ? 'flex' : 'none',
+    }
+
     return(
         <section className='header'>
-                <div className='score-item-container'>
+                <div style={highScoreStyle} className='score-item-container'>
                     <img className='score-icon' src={crown} alt="crown icon" />
                     <h2 className='score-item' style={{gridArea: '1 / 1 / 2 / 2'}}>Best Rolls Score: {props.bestRolls}</h2>
                 </div>
                 <h2 className='score-item' style={{gridArea: '2 / 1 / 3 / 2', marginTop: '0'}}>Current Rolls: {props.rolls}</h2>
-                <div className='score-item-container'>
+                <div style={highScoreStyle} className='score-item-container'>
                     <img className='score-icon' src={crown} alt="crown icon" />
                     <h2 className='score-item' style={{gridArea: '1 / 2 / 2 / 3'}}>Best Time Score: {props.bestTime}s</h2>
                 </div>
